@@ -108,6 +108,16 @@ class ViewController: UIViewController {
         buttonSound.play()
     }
 
+    @IBAction func onClearPress(sender: AnyObject) {
+        runningNumber = ""
+        leftValString = ""
+        rightValString = ""
+        operatorSelected = ""
+        currentOperation = Operation.Empty
+        result = ""
+        outputLabel.text = "0"
+        
+    }
     @IBAction func onEqualPress(sender: AnyObject) {
         processOperation(currentOperation)
     }
